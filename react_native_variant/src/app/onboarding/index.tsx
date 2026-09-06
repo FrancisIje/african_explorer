@@ -14,19 +14,16 @@ export default function OnboardingScreen() {
   return (
     <ThemedView style={styles.container}>
       <SafeAreaView style={styles.safeArea}>
-        <ThemedView style={styles.hero}>
-          <SymbolView
-            tintColor={theme.accent}
-            name={{ ios: 'globe.europe.africa.fill', android: 'travel_explore', web: 'globe' }}
-            size={96}
-          />
-          <ThemedText type="title" style={styles.centerText}>
-            African Explorer
-          </ThemedText>
-          <ThemedText type="default" themeColor="textSecondary" style={styles.centerText}>
-            Discover and book unforgettable safari tours across Africa.
-          </ThemedText>
-        </ThemedView>
+
+        <ThemedText type="title" style={{ fontSize: 64, lineHeight: 68 }}>
+          Discover
+          African
+          Savanna
+        </ThemedText>
+        <ThemedText type="default" themeColor="textSecondary" style={styles.container}>
+          Discover and book unforgettable safari tours across Africa.
+        </ThemedText>
+
 
         <Link href="/(tabs)/discover" replace asChild>
           <Pressable style={({ pressed }) => [styles.cta, { backgroundColor: theme.accent }, pressed && styles.pressed]}>
@@ -46,12 +43,13 @@ const styles = StyleSheet.create({
   },
   safeArea: {
     flex: 1,
-    alignSelf: 'center',
+    alignSelf: 'flex-start',
     width: '100%',
     maxWidth: MaxContentWidth,
-    justifyContent: 'space-between',
+    justifyContent: "flex-start",
+
     paddingHorizontal: Spacing.four,
-    paddingVertical: Spacing.six,
+    paddingVertical: Spacing.four,
   },
   hero: {
     flex: 1,
