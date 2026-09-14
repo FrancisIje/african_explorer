@@ -1,1 +1,1 @@
-Comparing the same app  in both react native and flutter
+Same app  in both react native and flutter
